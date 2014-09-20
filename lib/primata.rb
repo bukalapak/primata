@@ -1,5 +1,5 @@
 require "primata/version"
+require "primata/sms"
 
 module Primata
-  # Your code goes here...
 end
