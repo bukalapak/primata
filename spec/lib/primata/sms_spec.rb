@@ -17,14 +17,21 @@ describe Primata::SMS do
         it { expect(described_class.normalized_number(number)).to eq("+6281234567890") }
       end
 
-      it { expect(described_class.normalized_number("0271234567")).to eq("+62271234567") }
-      it { expect(described_class.normalized_number("(0271) 234567")).to eq("+62271234567") }
-      # it { expect(described_class.normalized_number("0271234567891234567890123456789")).to eq("+62271234567") }
+      [
+        "0271234567",
+        "(0271) 234567",
+        "+62 (0271) 234567",
+        "+62.271.234567",
+        "62.271.234567"
+      ].each do |number|
+        it { expect(described_class.normalized_number(number)).to eq("+62271234567") }
+      end
     end
 
     context "bad number" do
       it { expect(described_class.normalized_number("this-is-my-number")).to be_nil }
-      # it { expect(described_class.normalized_number("0812")).to be_nil }
+      it { expect(described_class.normalized_number("0812")).to be_nil }
+      it { expect(described_class.normalized_number("0271234567891234567890123456789")).to be_nil }
     end
   end
 end
