@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.1"
   spec.add_development_dependency "webmock", "~> 1.18"
 
-  spec.add_dependency "phonelib", "~> 0.3.4"
+  spec.add_dependency "phonelib", "~> 0.6.2"
   spec.add_dependency "twilio-ruby", ">= 3.11.4"
 end

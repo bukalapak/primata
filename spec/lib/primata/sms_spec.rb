@@ -12,9 +12,17 @@ describe Primata::SMS do
         "081234567890",
         "0812-345-678-90",
         "0812_345_678_90",
-        "0812.345.678.90",
+        "0812.345.678.90"
       ].each do |number|
         it { expect(described_class.normalized_number(number)).to eq("+6281234567890") }
+      end
+
+      # 13 digit number
+      [
+        "0895363788442",
+        "62895363788442"
+      ].each do |number|
+        it { expect(described_class.normalized_number(number)).to eq("+62895363788442") }
       end
 
       [
