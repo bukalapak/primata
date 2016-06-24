@@ -1,5 +1,7 @@
 # Primata
 
+[![Build Status](https://travis-ci.org/bukalapak/primata.svg?branch=master)](https://travis-ci.org/bukalapak/primata)
+
 TODO: Write a gem description
 
 ## Installation
