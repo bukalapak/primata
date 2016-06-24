@@ -1,6 +1,7 @@
 # Primata
 
 [![Build Status](https://travis-ci.org/bukalapak/primata.svg?branch=master)](https://travis-ci.org/bukalapak/primata)
+[![Coverage Status](https://img.shields.io/codecov/c/github/bukalapak/primata.svg)](https://codecov.io/gh/bukalapak/primata)
 
 TODO: Write a gem description
 
